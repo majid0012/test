@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<%= form_with search_posts_path, model: @post, :method => "get"  do |form|%>
+<%= form.label :query, "Search:" %>
+<%= form.text_field :query %>
+<%= form.submit 'Search' %>
+<% end %>
+<% if params[:query] %>
+    <p><%= params[:query] %></p>
+<% end %>
+<% @posts.each do |post| %>
+    <ul>
+        <li><%= post.title %></li>
+    </ul>
+<% end %>
