@@ -1,4 +1,4 @@
-FROM ruby:3.0.2-alpine3.13
+FROM majidwatto/rails-app
 
 ARG BUNDLER_VERSION=2.2.31
 
